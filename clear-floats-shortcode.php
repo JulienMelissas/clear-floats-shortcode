@@ -45,7 +45,7 @@ function cfs_clear_css() {
 add_action( 'wp_head', 'cfs_clear_css' );
 
 // Shortcode
-function clear_shortcode( $atts, $content = null ) {
+function cfs_shortcode( $atts, $content = null ) {
 	extract(shortcode_atts(array(
 		'direction' => 'both'
 	), $atts));
@@ -67,4 +67,4 @@ function clear_shortcode( $atts, $content = null ) {
 
 	return $output;
 }
-add_shortcode( 'clear', 'clear_shortcode' );
+add_shortcode( 'clear', 'cfs_shortcode' );
